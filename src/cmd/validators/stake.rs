@@ -135,7 +135,10 @@ fn print_txn(
                 ["Validator", validator],
                 ["Stake (HNT)", Hnt::from(txn.stake)],
                 ["Fee (DC)", txn.fee],
-                ["Hash", status_str(status)]
+                ["Hash", status_str(status)],
+                [Frb => "WARNING",
+                "Once staked an owner cannot access the staked amount until\n\
+                250,000 blocks (approx. 5 months) after unstaking."]
             );
             print_footer(status)
         }
